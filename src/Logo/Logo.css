@@ -1,0 +1,21 @@
+
+.flex{
+
+
+		display: flex;
+	
+	padding: 3vh;
+	justify-content: flex-start;	
+}
+.flexcenter{
+width: 9vh;
+height: 10vh;
+padding: 2vh;
+margin-bottom: 5vh;
+border: 1px solid grey ;
+border-radius: 2vh;
+background: #42275a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
