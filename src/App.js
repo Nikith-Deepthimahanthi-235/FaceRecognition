@@ -33,9 +33,27 @@ class  App extends Component{
 			imageURL: '',
 			box: {},
 			route: 'signin',
-			isSignedIn: false
+			isSignedIn: false,
+			user : {
+					id : '',
+					name : '',
+					email : '',
+					entires : 0,
+					joined :  ''
+					}
 		}
 	}
+
+loadUser = (data) =>{
+	this.setState({user : {
+					id : data.id,
+					name : data.name,
+					email : data.email,
+					entires : data.entires,
+					joined :  data.joined
+	}})
+}
+
 	calculateLocation = (data) =>{
 		const Boundary= data.outputs[0].data.regions[0].region_info.bounding_box
 		const image =document.getElementById('inputImg');
@@ -91,7 +109,7 @@ render(){
 	: (
 		route ==='signin'
 		?<SignIn onRouteChange={this.onRouteChange}/> 
-      	:<Register onRouteChange={this.onRouteChange}/>)
+      	:<Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>)
      }
     </div>
   );
